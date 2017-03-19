@@ -15,11 +15,11 @@ main:		li	$v0, 5		# load system call code 5 (read int) into register $v0
 		move	$t0, $v0 	# copy the read value
 		andi	$t0, $t0, 1	# Identify LS bit
 		
-		beqz	$t0, print_even
+		beqz	$t0, print_even	# LS bit 0 - num even
 		
 		
-print_odd:	la 	$a0, odd
-		li 	$v0, 4
+print_odd:	la 	$a0, odd	# load address of instr to print Odd into arg0
+		li 	$v0, 4		# load system call code 4 to print str
 		syscall
 		
 		j	end
