@@ -8,7 +8,7 @@ main:
 	
 	sw	$t5, 0($sp)		# push prod to stack
 	addi 	$sp, $sp, -4		# inc stack pointer
-	sw	$t6, 0($sp)		# pus	
+	sw	$t6, 0($sp)		# push sum to stack	
 	
 	jal	sum_prod		# call 
 	
